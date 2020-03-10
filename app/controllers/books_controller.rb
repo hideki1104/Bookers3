@@ -23,6 +23,7 @@ class BooksController < ApplicationController
   def show
     @books = Book.find(params[:id])
     @book = Book.new
+    @post_comment = PostComment.new
     @user = current_user
   end
 
@@ -44,8 +45,8 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    book = Book.find(params[:id])
-    book.destroy
+    @books = Book.find(params[:id])
+    @books.destroy
     redirect_to books_path
   end
 
@@ -57,5 +58,10 @@ private
     def user_params
         params.require(:user).permit(:name, :profile_image, :introduction)
     end
+
+  private
+  def post_comment_params
+    params.require(:post_comment).permit(:user_id,:book_id,:comment)
+  end
 
 end

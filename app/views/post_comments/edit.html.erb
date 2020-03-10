@@ -1,0 +1,7 @@
+<h2>Edit Comment</h2>
+<%= form_for [@book, @post_comment] do |f| %>
+        <div class="col-sm-9">
+            <%= f.text_area :comment, rows:'5', class: "form-control" %>
+    <%= f.submit "Update", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
+       </div>
+<% end %>

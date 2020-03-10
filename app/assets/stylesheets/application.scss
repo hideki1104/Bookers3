@@ -16,6 +16,10 @@
     @import "bootstrap-sprockets";
     @import "bootstrap";
 
+a{
+	color:#fff;
+}
+
 nav{
 	background-color:#222;
 	color:#fff;
@@ -48,4 +52,24 @@ nav a{
 li{
 	display:inline-block;
 	padding:15px 15px;
+}
+
+.image1 {
+background-image: url(image1.jpg);
+}
+.image2 {
+background-image: url(image2.jpg);
+}
+.image3 {
+background-image: url(image3.jpg);
+}
+.image4 {
+background-image: url(image4.jpg);
+}
+.image5 {
+background-image: url(image5.jpg);
+}
+
+#container{
+	height: 500px;
 }
